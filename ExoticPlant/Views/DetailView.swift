@@ -42,6 +42,7 @@ struct DetailView: View {
                             .resizable()
                             .scaledToFill()
                             .frame(height: 300)
+                            .frame(width: 410)
                             .clipped()
                     } else if let base64String = plant.image,
                               let imageData = Data(base64Encoded: base64String),
@@ -50,11 +51,13 @@ struct DetailView: View {
                             .resizable()
                             .scaledToFill()
                             .frame(height: 300)
+                            .frame(width: 410)
                             .clipped()
                     } else {
                         Rectangle()
                             .fill(Color.secondary.opacity(0.3))
                             .frame(height: 300)
+                            .frame(width: 410)
                             .overlay(
                                 Image(systemName: "photo")
                                     .font(.system(size: 40))
